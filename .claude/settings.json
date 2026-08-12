@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "language": "spanish",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch(domain:docs.genexus.com)",
+      "WebFetch(domain:wiki.genexus.com)",
+      "WebFetch(domain:training.genexus.com)",
+      "WebFetch(domain:search.genexus.com)",
+      "WebFetch(domain:www.genexus.com)",
+      "WebFetch(domain:developer.android.com)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(rg *)",
+      "Bash(unzip -l *)"
+    ],
+    "deny": [
+      "Write(nexa-genexus-18/**)",
+      "Edit(nexa-genexus-18/**)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/inventario-kb.mjs",
+            "timeout": 15,
+            "statusMessage": "Leyendo inventario de la base de conocimientos"
+          }
+        ]
+      }
+    ]
+  }
+}

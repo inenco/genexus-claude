@@ -1,0 +1,2 @@
+cd C:\ARCHIVOSERPDESA\procesos 
+java -cp lib\gxclassR.jar;lib\gxcommon.jar;lib\commons-io-2.2.jar;lib\mysql-connector-java-5.1.49.jar;lib\gxmail.jar;lib\log4j-core-2.13.3.jar;lib\log4j-api-2.13.3.jar;lib\log4j-core-2.13.3.jar;lib\bcprov-jdk15on-1.64.jar;lib\joda-time-2.10.4.jar;lib\commons-collections4-4.1.jar;lib\commons-codec-1.9.jar;lib\commons-lang-2.4.jar;com.erp.GXcfg; com.erp.aprocedimientosdiarios

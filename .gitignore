@@ -1,0 +1,6 @@
+# Preferencias personales de Claude Code (no se comparten con el equipo)
+.claude/settings.local.json
+
+# Windows
+Thumbs.db
+desktop.ini

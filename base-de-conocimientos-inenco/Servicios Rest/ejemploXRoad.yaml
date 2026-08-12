@@ -1,0 +1,153 @@
+openapi: 3.0.0
+host: 192.168.12.234
+paths:
+  /xroad/hola-mundo:
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: string
+  /xroad/renaper/{dni}/{genero}:
+    get:
+      operationId: RenaperController_getRenapaer
+      parameters:
+        - name: dni
+          required: true
+          in: path
+          schema:
+            type: string
+        - name: genero
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearer: []
+  /xroad/regisneu:
+    get:
+      operationId: RegisneuController_getRegisneu
+      parameters:
+        - name: dni
+          required: true
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearer: []
+  /xroad/ws_pfx/{dni}:
+    post:
+      operationId: PkiPFXController_postPfx
+      parameters:
+        - name: dni
+          required: true
+          in: path
+          schema:
+            type: string
+      responses:
+        '201':
+          description: ''
+      security:
+        - bearer: []
+  /xroad/user/login:
+    post:
+      operationId: UsersController_login
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUserDto'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+  /xroad/rentas/prod/WS_CertificadoContratar:
+    post:
+      operationId: RentasController_getCertificadoContratarProd
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CertificadoContratarDto'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+        - bearer: []
+  /xroad/rentas/desa/WS_CertificadoContratar:
+    post:
+      operationId: RentasController_getCertificadoContratarDesa
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CertificadoContratarDto'
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+        - bearer: []
+info:
+  title: XROAD
+  description: 'ALL ENDPOINT XROAD '
+  version: '1.0'
+  contact: {}
+tags:
+  - name: XROAD
+    description: ''
+servers: []
+components:
+  securitySchemes:
+    bearer:
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
+  schemas:
+    LoginUserDto:
+      type: object
+      properties:
+        username:
+          type: string
+          minLength: 5
+          maxLength: 255
+        password:
+          type: string
+          minLength: 5
+          maxLength: 1024
+      required:
+        - username
+        - password
+    CertificadoContratarDto:
+      type: object
+      properties:
+        cuit:
+          type: string
+      required:
+        - cuit

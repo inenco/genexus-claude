@@ -1,0 +1,5 @@
+Introducción:Este documento fue creado para centralizar el conocimiento compartido. El objetivo es que, cada vez que nos enfrentemos a un error desafiante (o común) y logres solucionarlo, dejes constancia acá. De esta forma, si otro compañero se encuentra con el mismo error en el futuro, podrá resolverlo rápido. Las soluciones brindadas en este documento no deben aplicarse sin antes hacer un análisis del dominio. Fueron aplicadas en proyectos de compañeros estando conscientes de no romper otros flujos. 
+
+Plantilla: 
+
+Error:Business Component generaba datos en la Base de Datos incluso sin ejecutar un Commit explícito en el código. Despues de un análisis se concluye que debido a que las Rules en común y en el bloque de [BC], junto con el procedimiento After Trn de la Transacción, ejecutaban procedimientos con la propiedad Commit on Exit = yes, el Commit era realizado en este punto.
