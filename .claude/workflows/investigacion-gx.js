@@ -237,7 +237,7 @@ phase('Consolidar')
 
 const final = await agent(
   [
-    'Consolida la respuesta final para el equipo de Inenco. La firma Lucia.',
+    'Consolida la respuesta final para el equipo de Inenco. La firma Emilia.',
     '',
     `Consulta: ${CONSULTA}`,
     '',

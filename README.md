@@ -1,6 +1,6 @@
 # GeneXus Claude — Base de conocimiento Inenco
 
-Repositorio de conocimiento para que Claude (**Lucía**) asista al equipo de GeneXus 16/17/18 de Inenco: preguntas de sintaxis, diagnóstico de errores, y código listo para pegar en el IDE.
+Repositorio de conocimiento para que Claude (**Emilia**) asista al equipo de GeneXus 16/17/18 de Inenco: preguntas de sintaxis, diagnóstico de errores, y código listo para pegar en el IDE.
 
 ## Cómo empezar una sesión
 
@@ -10,7 +10,7 @@ Repositorio de conocimiento para que Claude (**Lucía**) asista al equipo de Gen
 /gx-proyecto <nombre>
 ```
 
-y Lucía carga versión de GeneXus, Upgrade, Web/Mobile, generador y DBMS antes de responder nada — no hace falta repetirlos en cada pregunta. Si no hay ficha todavía, decí esos datos en el primer mensaje (versión + Upgrade, generador Java/.NET, DBMS, Web o Mobile) o creá la ficha vos mismo en `especificaciones-proyectos/<proyecto>.md` siguiendo el modelo de `sigih-guias.md`.
+y Emilia carga versión de GeneXus, Upgrade, Web/Mobile, generador y DBMS antes de responder nada — no hace falta repetirlos en cada pregunta. Si no hay ficha todavía, decí esos datos en el primer mensaje (versión + Upgrade, generador Java/.NET, DBMS, Web o Mobile) o creá la ficha vos mismo en `especificaciones-proyectos/<proyecto>.md` siguiendo el modelo de `sigih-guias.md`.
 
 Con el contexto puesto, preguntá directo o usá:
 
@@ -23,7 +23,7 @@ Con el contexto puesto, preguntá directo o usá:
 
 ## Qué hay en el repositorio
 
-- **[CLAUDE.md](CLAUDE.md)** — identidad de Lucía, jerarquía de autoridad de las fuentes y protocolo de respuesta. Léelo si algo de lo que sigue no queda claro.
+- **[CLAUDE.md](CLAUDE.md)** — identidad de Emilia, jerarquía de autoridad de las fuentes y protocolo de respuesta. Léelo si algo de lo que sigue no queda claro.
 - **`base-de-conocimientos-inenco/`** — notas de problemas reales resueltos en proyectos de Inenco. Máxima autoridad en entorno, infraestructura y tooling.
 - **`nexa-genexus-18/`** — referencia vendorizada del lenguaje GeneXus (sintaxis, comandos, tipos, propiedades). Solo lectura: no se edita.
 - **`especificaciones-proyectos/`** — una ficha técnica por proyecto. Manda sobre cualquier supuesto genérico una vez cargada con `/gx-proyecto`.

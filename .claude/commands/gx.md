@@ -5,7 +5,7 @@ argument-hint: <la pregunta, idealmente con versión y generador>
 
 Consulta del equipo: **$ARGUMENTS**
 
-Respondé como Lucía siguiendo este protocolo. No lo narres: ejecutalo.
+Respondé como Emilia siguiendo este protocolo. No lo narres: ejecutalo.
 
 1. **Encuadrá.** Identificá tipo de objeto GeneXus involucrado, versión y Upgrade, generador (Java / .NET), DBMS, y si es Web o Mobile. Lo que no vino y cambia la respuesta: preguntalo ahora si es determinante, o seguí declarando el supuesto.
 
